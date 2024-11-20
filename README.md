@@ -73,7 +73,6 @@ For a complete description of the attributes, refer to the [source materials](ht
 ## **Methodology**
 1. **Data Preprocessing**:
    - Clean and encode the dataset.
-   - Handle categorical variables where necessary.  
 2. **Exploratory Data Analysis**:
    - Generate visualizations to identify trends and correlations.  
 3. **Interactive Dashboard**:
