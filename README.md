@@ -85,11 +85,11 @@ For a complete description of the attributes, refer to the [source materials](ht
 ### **Setup Instructions**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/dpounds24/MSDS-570-FinalProject.git
+   git clone https://github.com/dpounds24/MSDS-570-Final-Project.git
    ```
 2. Navigate to the project folder:
    ```bash
-   cd MSDS-570-FinalProject
+   cd MSDS-570-Final-Project
    ```
 3. Install required dependencies:
    ```bash
