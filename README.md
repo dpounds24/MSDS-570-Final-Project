@@ -54,7 +54,7 @@ For a complete description of the attributes, refer to the [source materials](ht
 ```
 ├── README.md                     # Overview of the project
 ├── data/                         # Dataset and related files
-│   └── migraine_dataset.csv      # The dataset
+│   └── migraine.csv      # The dataset
 ├── notebooks/                    # Jupyter notebooks
 │   ├── 01_data_preprocessing.ipynb  # Preprocessing and cleaning
 │   ├── 02_exploratory_analysis.ipynb # Visualizations and trends
