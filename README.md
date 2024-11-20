@@ -2,150 +2,138 @@
 **Investigating the Relationship Between Sensory Symptoms and Migraine Intensity**  
 
 ## **Table of Contents**
+
 1. [Project Overview](#project-overview)  
-2. [Dataset Description](#dataset-description)  
+2. [Dataset Description](#dataset-description)
 3. [Project Objectives](#project-objectives)  
 4. [Expected Outcomes](#expected-outcomes)  
-5. [Methodology](#methodology)  
-6. [Project Requirements](#project-requirements)  
-7. [Repository Structure](#repository-structure)  
-8. [How to Use](#how-to-use)  
-9. [Acknowledgments](#acknowledgments)  
+5. [Repository Structure](#repository-structure)  
+6. [Methodology](#methodology)  
+7. [Installation and Usage](#installation-and-usage)  
+   - [Setup Instructions](#setup-instructions)  
+   - [Running Jupyter Notebooks](#running-jupyter-notebooks)  
+   - [Running the Dash App](#running-the-dash-app)  
+8. [Dependencies](#dependencies)  
+9. [Acknowledgments](#acknowledgments)
 
 ---
 
 ## **Project Overview**
-This project investigates the relationship between sensory symptoms and migraine intensity using a dataset of 400 patient records. The goal is to understand patterns and correlations that could help identify potential triggers or indicators of severe migraines, as well as visualize these findings interactively.
+Understanding the relationship between sensory symptoms and migraine intensity is crucial for identifying potential triggers and improving migraine management strategies. This project leverages data visualization techniques to uncover trends and insights that might otherwise go unnoticed.
 
 ---
 
 ## **Dataset Description**
-- **Source:** [Migraine Dataset on Kaggle](https://www.kaggle.com/datasets/ranzeet013/migraine-dataset)  
-- **Characteristics:**
-  - **Number of Instances:** 400
-  - **Number of Attributes:** 24
-  - **Associated Tasks:** Classification
-  - **Missing Values:** No  
-- **Dataset Information:**  
-  A medical dataset containing records of patients diagnosed with various migraine pathologies. Features include patient demographics, sensory symptoms, and migraine intensity levels.  
-- **Key Features:**
-  - **Sensory Symptoms**: Indicators such as visual, sensory, vertigo, and paresthesia.
-  - **Migraine Intensity**: Pain intensity levels (None, Mild, Medium, Severe).  
-  - **Attributes**: Refer to the dataset's [description](https://www.kaggle.com/datasets/ranzeet013/migraine-dataset) for a full list of features.
+- **Source**: [Migraine Dataset on Kaggle](https://www.kaggle.com/datasets/ranzeet013/migraine-dataset)  
+- **Number of Records**: 400  
+- **Number of Attributes**: 24  
+- **Highlights**: The dataset contains sensory symptoms, migraine intensity, migraine characteristics, and patient demographics.  
+
+For a complete description of the attributes, refer to the [source materials](https://codeocean.com/capsule/1269964/tree/v1).
 
 ---
 
 ## **Project Objectives**
-1. Analyze the correlation between sensory symptoms and the intensity/duration of migraines.  
-2. Visualize the distribution and frequency of sensory symptoms related to migraine severity.  
-3. Identify patterns in sensory symptoms that could indicate severe migraines.  
+1. Analyze correlations between sensory symptoms and the intensity/duration of migraines.  
+2. Visualize the distribution and frequency of sensory symptoms across patient demographics and migraine types.  
+3. Provide actionable insights through interactive tools for exploring the data.  
 
 ---
 
 ## **Expected Outcomes**
-1. **Interactive Visualizations:**
-   - Heatmaps, scatter plots, box plots, and stacked bar charts to display relationships.  
-2. **Plotly Dash Application:**
-   - An interactive dashboard to explore the dataset and visualizations.  
-3. **Actionable Insights:**
-   - Insights into potential triggers or indicators of severe migraines to inform migraine management strategies.  
-
----
-
-## **Methodology**
-1. **Data Preprocessing:**
-   - Load and clean the dataset, normalize features, and encode categorical variables.  
-2. **Exploratory Data Analysis:**
-   - Generate visualizations to understand the dataset, including trends and correlations.  
-3. **Modeling:**
-   - Apply machine learning algorithms to classify migraine intensity based on symptoms.  
-4. **Interactive Dashboard:**
-   - Develop a Plotly Dash application to allow users to interact with the data and visualizations.  
-
----
-
-## **Project Requirements**
-- Python 3.8+  
-- Required Libraries (to be installed via `requirements.txt`):  
-  ```
-  pandas
-  numpy
-  scikit-learn
-  plotly
-  dash
-  matplotlib
-  seaborn
-  jupyter
-  ```
-- Additional tools: Jupyter Notebook for data analysis and Dash for the interactive application.
+1. **Interactive Visualizations**:
+   - Heatmaps, scatter plots, box plots, and stacked bar charts to display trends and correlations.  
+2. **Dash App**:
+   - An interactive dashboard allowing users to explore and manipulate the data.  
+3. **Insights**:
+   - Highlights potential migraine triggers and symptom patterns for actionable recommendations.  
 
 ---
 
 ## **Repository Structure**
 ```
-├── README.md                     # Project Overview  
+├── README.md                     # Overview of the project
 ├── data/                         # Dataset and related files
-│   └── migraine_dataset.csv      # Kaggle dataset  
-├── notebooks/                    # Jupyter Notebooks for analysis  
-│   ├── 01_data_preprocessing.ipynb  
-│   ├── 02_exploratory_analysis.ipynb  
-│   ├── 03_modeling.ipynb  
-├── scripts/                      # Python scripts for data processing and modeling  
-│   ├── preprocess.py  
-│   ├── visualize.py  
-│   ├── classify.py  
-├── results/                      # Output plots and results  
-│   ├── visualizations/  
-│   ├── metrics.csv  
-├── requirements.txt              # Required libraries and dependencies  
-└── LICENSE                       # License for the repository  
+│   └── migraine_dataset.csv      # The dataset
+├── notebooks/                    # Jupyter notebooks
+│   ├── 01_data_preprocessing.ipynb  # Preprocessing and cleaning
+│   ├── 02_exploratory_analysis.ipynb # Visualizations and trends
+├── scripts/                      # Python scripts
+│   ├── preprocess.py             # Data preparation functions
+│   ├── visualize.py              # Functions for creating visualizations
+│   ├── app.py                    # Dash app for interactive exploration
+├── results/                      # Outputs (plots, dashboards, etc.)
+│   ├── visualizations/           # Generated visualizations
+├── requirements.txt              # Dependencies and libraries
+└── LICENSE                       # License information
 ```
 
 ---
 
-## **How to Use**
-### **Set Up the Environment**
-1. Clone this repository:
+## **Methodology**
+1. **Data Preprocessing**:
+   - Clean and encode the dataset.
+   - Handle categorical variables where necessary.  
+2. **Exploratory Data Analysis**:
+   - Generate visualizations to identify trends and correlations.  
+3. **Interactive Dashboard**:
+   - Build a Plotly Dash application to allow users to interact with the data.
+
+---
+
+## **Installation and Usage**
+
+### **Setup Instructions**
+1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/MSDS570-FinalProject.git
+   git clone https://github.com/dpounds24/MSDS-570-FinalProject.git
    ```
 2. Navigate to the project folder:
    ```bash
-   cd MSDS570-FinalProject
+   cd MSDS-570-FinalProject
    ```
-3. Install the dependencies:
+3. Install required dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-### **Run the Notebooks**
-1. Open Jupyter Notebook:
+### **Running Jupyter Notebooks**
+1. Start Jupyter Notebook:
    ```bash
    jupyter notebook
    ```
-2. Navigate to the `notebooks/` folder and execute the notebooks in sequence:
-   - **01_data_preprocessing.ipynb**: Prepares the dataset for analysis.  
-   - **02_exploratory_analysis.ipynb**: Explores the data and generates visualizations.  
-   - **03_modeling.ipynb**: Builds and evaluates classification models.
+2. Open and run the notebooks in the `notebooks/` folder.
 
-### **Run the Dash Application**
-1. Navigate to the `scripts/` folder:
+### **Running the Dash App**
+1. Navigate to the `scripts/` directory:
    ```bash
    cd scripts
    ```
-2. Run the Dash app:
+2. Run the Dash application:
    ```bash
    python app.py
    ```
-3. Open your browser and navigate to `http://localhost:8050`.
+3. Access the app at `http://localhost:8050`.
+
+---
+
+## **Dependencies**
+The project requires the following Python libraries:
+```
+pandas
+numpy
+plotly
+dash
+matplotlib
+seaborn
+jupyter
+```
 
 ---
 
 ## **Acknowledgments**
-- Kaggle for providing the [Migraine Dataset](https://www.kaggle.com/datasets/ranzeet013/migraine-dataset).  
-- Dr. [Professor's Name], for their guidance in this course.  
-- Meharry Medical College for the educational resources and support.  
+- **Kaggle**: For providing the [Migraine Dataset](https://www.kaggle.com/datasets/ranzeet013/migraine-dataset).  
+- **Dr. Qian**: For guidance throughout this project.  
+- **Meharry Medical College**: For supporting this educational endeavor.
 
 ---
-
-Let me know if you'd like me to refine this further!
