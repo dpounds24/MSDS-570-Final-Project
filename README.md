@@ -59,13 +59,13 @@ For a complete description of the attributes, refer to the [source materials](ht
 │   ├── 01_data_preprocessing.ipynb  # Preprocessing and cleaning
 │   ├── 02_exploratory_analysis.ipynb # Visualizations and trends
 ├── scripts/                      # Python scripts
-│   ├── preprocess.py             # Data preparation functions
-│   ├── visualize.py              # Functions for creating visualizations
-│   ├── app.py                    # Dash app for interactive exploration
+|   ├── data_processing.py       # Loading and preprocessing logic.
+|   ├── eda.py                   # Exploratory data analysis scripts.
+|   ├── visualizations.py        # Visualization functions (static and interactive).
+|   ├── dash_app.py              # Dash app logic.
 ├── results/                      # Outputs (plots, dashboards, etc.)
 │   ├── visualizations/           # Generated visualizations
-├── requirements.txt              # Dependencies and libraries
-└── LICENSE                       # License information
+└── requirements.txt              # Dependencies and libraries
 ```
 
 ---
@@ -110,7 +110,7 @@ For a complete description of the attributes, refer to the [source materials](ht
    ```
 2. Run the Dash application:
    ```bash
-   python app.py
+   python dash_app.py
    ```
 3. Access the app at `http://localhost:8050`.
 
